@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Login - เข้าสู่ระบบ</title>
+    
+    <link rel="icon" type="image/png" href="img/dns-icon.png">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        form.user .form-control-pass {
+            font-size: 0.8rem;
+            border-radius: 10rem;
+            padding: 1.5rem 1rem;
+            position: relative;
+            }
+            .form-control-pass input[type="password"],
+            .form-control-pass input[type="text"]{
+            width: 100%;
+            padding: 12px 36px 12px 12px;
+            box-sizing: border-box;
+            }
+            .fa-eye{
+            position: absolute;
+            top: 48.3%;
+            right: 2.5%;
+            width: 22px;
+            text-align: center;
+            padding: 10px;
+            color: lightgray;
+            min-width: 50px;
+            transform: translate(-100%,0%);
+            text-align: center;
+        }
+
+        /* :root{
+            --overlay-color-1: #2fa4b6;
+            --overlay-color-2: #4c71de;
+            --anim-duration: 2s;
+        }
+
+        #gradient {
+            opacity: 0.8;
+            background: none;
+        }
+
+        #gradient:after,
+        #gradient:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+        }
+
+        #gradient:before {
+            background: linear-gradient(135deg, var(--overlay-color-2) 0%, var(--overlay-color-1) 100%);
+            animation: OpacityAnim var(--anim-duration) ease-in-out 0s infinite alternate;
+        }
+
+        #gradient:after {
+            background: linear-gradient(135deg, var(--overlay-color-1) 0%, var(--overlay-color-2) 100%);
+            animation: OpacityAnim var(--anim-duration) ease-in-out calc(-1 * var(--anim-duration)) infinite alternate;
+        }
+
+        @keyframes OpacityAnim {
+            0%{opacity: 1.0}
+            100%{opacity: 0.0}
+        } */
+    </style>
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div id="gradient"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <font  style="color:black; font-size: 2em;"  > Login เข้าสู่ระบบ </font>
+                                    </div>
+                                    <form class="user" action="checkuser.php" method="post">
+                                        <div class="form-group mt-4">
+                                            <input type="text" required name="idcard" class="form-control form-control-user"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="กรอกชื่อผู้ใช้" maxlength="13">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" required name="tel" class="form-control form-control-pass"
+                                            id="password" placeholder="กรอกรหัสผ่าน" maxlength="10">
+                                            <i class="fa-solid fa-eye fa-eye-slash" id="eye"></i>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary btn-user btn-block mt-4" name = "login_user">
+                                            เข้าสู่ระบบ Login
+                                        </button></br>
+                                        
+                                        <div class="text-center">
+                                            <a class="submit" href="register.html">ลงทะเบียน Register</a>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myInput");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+    </script>
+    
+    <script>
+        const passwordField = document.querySelector("#password");
+        const eyeIcon= document.querySelector("#eye");
+            eye.addEventListener("click", function(){
+                this.classList.toggle("fa-eye-slash");
+                const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+                passwordField.setAttribute("type", type);
+            })
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
